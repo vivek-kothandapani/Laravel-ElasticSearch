@@ -23,6 +23,7 @@
 	
     <!-- Custom CSS-->
     <link href="home/css/general.css" rel="stylesheet">
+    
 	
 	 <!-- Owl-Carousel -->
     <link href="home/css/custom.css" rel="stylesheet">
@@ -33,7 +34,14 @@
 	
 	<!-- Magnific Popup core CSS file -->
 	<link rel="stylesheet" href="home/css/magnific-popup.css"> 
-	
+        
+	<!--<link href="css/normalize.min.css" rel="stylesheet"> -->
+        <link href="css/main.css" rel="stylesheet">
+        <script src="js/typeahead/handlebars.js"></script>
+    <script src="js/typeahead/jquery-1.10.2.min.js"></script>
+    <script src="js/typeahead/jquery.xdomainrequest.min.js"></script>
+	<script src="js/typeahead/typeahead.bundle.js"></script>
+    <script src="js/typeahead/main.js"></script>
 	<script src="home/js/modernizr-2.8.3.min.js"></script>  <!-- Modernizr /-->
 	<!--[if IE 9]>
 		<script src="home/js/PIE_IE9.js"></script>
@@ -59,13 +67,27 @@
     <div class="intro-header">
 		<div class="col-xs-12 text-center abcen1">
 			<h1 class="h1_home wow fadeIn" data-wow-delay="0.4s">Search Inc</h1>
-			<h3 class="h3_home wow fadeIn" data-wow-delay="0.6s">eCommerce, Site & Enterprise Search</h3>
-			<ul class="list-inline intro-social-buttons">
+			<h3 class="h3_home wow fadeIn" data-wow-delay="0.6s">On-Site & Enterprise Search Demo</h3>
+                        <div class="Demo">
+          <form action="https://twitter.com/search" method="get">
+            <input type="hidden" name="mode" value="users">
+            <div class="Typeahead Typeahead--twitterUsers">
+              <div class="u-posRelative">
+                <input class="Typeahead-hint" type="text" tabindex="-1" readonly>
+                <input class="Typeahead-input" id="demo-input" type="text" name="q" placeholder="Search Twitter users...">
+                <img class="Typeahead-spinner" src="img/spinner.gif">
+              </div>
+              <div class="Typeahead-menu"></div>
+            </div>
+            <button class="u-hidden" type="submit">blah</button>
+          </form>
+        </div>
+			<!--<ul class="list-inline intro-social-buttons">
 				<li><a href="https://twitter.com/galantiandrea" class="btn  btn-lg mybutton_cyano wow fadeIn" data-wow-delay="0.8s"><span class="network-name">Twitter</span></a>
 				</li>
 				<li id="download" ><a href="#downloadlink" class="btn  btn-lg mybutton_standard wow swing wow fadeIn" data-wow-delay="1.2s"><span class="network-name">Free Download</span></a>
 				</li>
-			</ul>
+			</ul> -->
 		</div>    
         <!-- /.container -->
 		<div class="col-xs-12 text-center abcen wow fadeIn">
@@ -405,18 +427,18 @@
 		</div>
 	</div>
 	
-	<!-- Banner Download -->
+	<!-- Banner Download 
 	<div id="downloadlink" class="banner">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6 col-md-offset-3 text-center wrap_title">
 				<h2>Download Free</h2>
-				<p class="lead" style="margin-top:0">Pay with a Tweet</p>
-				<p><a class="btn btn-embossed btn-primary view" role="button">Free Download</a></p> 
+				<p class="lead" style="margin-top:0">Demo</p>
+				<p><a class="btn btn-embossed btn-primary view" role="button"></a></p> 
 			 </div>
 			</div>
 		</div>
-	</div>
+	</div>-->
 	
 	<!-- Contact -->
 	<div id="contact" class="content-section-a">
