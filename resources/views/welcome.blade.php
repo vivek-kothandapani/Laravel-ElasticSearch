@@ -37,11 +37,9 @@
         
 	<!--<link href="css/normalize.min.css" rel="stylesheet"> -->
         <link href="css/main.css" rel="stylesheet">
-        <script src="js/typeahead/handlebars.js"></script>
-    <script src="js/typeahead/jquery-1.10.2.min.js"></script>
-    <script src="js/typeahead/jquery.xdomainrequest.min.js"></script>
-	<script src="js/typeahead/typeahead.bundle.js"></script>
-    <script src="js/typeahead/main.js"></script>
+        
+        
+       
 	<script src="home/js/modernizr-2.8.3.min.js"></script>  <!-- Modernizr /-->
 	<!--[if IE 9]>
 		<script src="home/js/PIE_IE9.js"></script>
@@ -62,6 +60,7 @@
 	<div id="preloader">
 		<div id="status"></div>
 	</div>
+        
 	
 	<!-- FullScreen -->
     <div class="intro-header">
@@ -74,7 +73,7 @@
             <div class="Typeahead Typeahead--twitterUsers">
               <div class="u-posRelative">
                 <input class="Typeahead-hint" type="text" tabindex="-1" readonly>
-                <input class="Typeahead-input" id="demo-input" type="text" name="q" placeholder="Search Twitter users...">
+                <input class="Typeahead-input" id="demo-input" type="text" style="color:black" name="q" placeholder="Search cars...">
                 <img class="Typeahead-spinner" src="img/spinner.gif">
               </div>
               <div class="Typeahead-menu"></div>
@@ -129,7 +128,7 @@
 		<div class="container">
 
 			<div class="col-md-6 col-md-offset-3 text-center wrap_title">
-				<h2>What is?</h2>
+				<h2>Features</h2>
 				<p class="lead" style="margin-top:0">A special thanks to ElasticSearch and Laravel.</p>
 				
 			</div>
@@ -545,7 +544,34 @@
     </footer>
 
     <!-- JavaScript -->
-    <script src="home/js/jquery-1.10.2.js"></script>
+    <script id="result-template" type="text/x-handlebars-template">
+      <div class="ProfileCard u-cf">
+        <img class="ProfileCard-avatar" src="@{{profile_image_url_https}}">
+
+        <div class="ProfileCard-details">
+          <div class="ProfileCard-realName" style="color:black">@{{name}}</div>
+          <div class="ProfileCard-screenName">@@{{screen_name}}</div>
+          <div class="ProfileCard-description" style="color:black">@{{description}}</div>
+        </div>
+
+        <div class="ProfileCard-stats">
+          <div class="ProfileCard-stat" style="color:black"><span class="ProfileCard-stat-label">Tweets:</span> @{{statuses_count}}</div>
+          <div class="ProfileCard-stat" style="color:black"><span class="ProfileCard-stat-label">Following:</span> @{{friends_count}}</div>
+          <div class="ProfileCard-stat" style="color:black"><span class="ProfileCard-stat-label">Followers:</span> @{{followers_count}}</div>
+        </div>
+      </div>
+    </script>
+
+    <script id="empty-template" type="text/x-handlebars-template">
+      <div class="EmptyMessage" style="color:black">Your search turned up 0 results. This most likely means the backend is down, yikes!</div>
+    </script>
+ <script src="js/typeahead/handlebars.js"></script>
+    <script src="js/typeahead/jquery-1.10.2.min.js"></script>
+    <script src="js/typeahead/jquery.xdomainrequest.min.js"></script>
+	<script src="js/typeahead/typeahead.bundle.js"></script>
+    <script src="js/typeahead/main.js"></script>
+    
+  <!--<script src="home/js/jquery-1.10.2.js"></script> -->
     <script src="home/js/bootstrap.js"></script>
 	<script src="home/js/owl.carousel.js"></script>
 	<script src="home/js/script.js"></script>
